@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #ffffff;
+    --color-accent: #ff6b6b;
+    --color-muted: #666666;
+  }
+
+  body {
+    @apply bg-primary text-secondary font-sans;
+  }
+
+  html, body, #root {
+    @apply h-full w-full m-0 p-0;
+  }
+}
+
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-accent text-primary rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 cursor-pointer;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-transparent border border-secondary text-secondary rounded-lg hover:bg-secondary hover:text-primary transition-all duration-300 cursor-pointer;
+  }
+}
